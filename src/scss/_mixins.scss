@@ -3,4 +3,40 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-decoration: none;
+}
+//  the main div
+@mixin nav-size {
+  display: inline-block;
+  padding: 2rem;
+}
+//  Center content
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+// box size
+@mixin box-size($size) {
+  height: #{$size};
+  width: #{$size};
+  border: 2px solid black;
+  background-color: gray;
+}
+//  Hide element
+@mixin hide {
+  opacity: 0;
+  visibility: hidden;
+}
+// Fade
+@mixin reveal {
+  opacity: 1;
+  visibility: visible;
+}
+@mixin fade-in($time) {
+  animation-name: fade-in;
+  animation-duration: #{$time};
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

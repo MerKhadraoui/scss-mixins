@@ -1,0 +1,7 @@
+.header nav {
+  @include nav-size;
+
+  a {
+    @include reset-list;
+  }
+}
