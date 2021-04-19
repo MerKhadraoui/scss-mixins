@@ -1,4 +1,7 @@
 .header nav {
+  @include box-size(3rem);
+  background-color: transparent;
+  border: none;
   @include nav-size;
 
   a {

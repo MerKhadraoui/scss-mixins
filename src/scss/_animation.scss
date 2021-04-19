@@ -1,0 +1,16 @@
+.box h1 {
+  @include fade-in(2s);
+}
+@keyframes fade-in {
+  0% {
+    @include hide;
+    @include font(1rem);
+  }
+  50% {
+    @include font(2rem);
+  }
+  100% {
+    @include reveal;
+    @include font(4rem);
+  }
+}

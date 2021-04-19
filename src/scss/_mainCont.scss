@@ -1,0 +1,6 @@
+div {
+  @include center;
+  .box {
+    @include box-size(20rem);
+  }
+}
