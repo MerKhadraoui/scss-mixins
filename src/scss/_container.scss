@@ -1,0 +1,7 @@
+.container {
+  span {
+    @include box-size(6rem);
+    @include center;
+  }
+  flex-direction: column;
+}
