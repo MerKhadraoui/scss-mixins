@@ -94,7 +94,7 @@
 
 $font-sizes: (
   xs: 12px,
-  sm: 14px,
+  s: 14px,
   m: 16px,
   l: 32px,
   xl: 48px,
@@ -107,17 +107,17 @@ $orange-colors: (
 );
 
 @mixin font-size($size) {
-  @if map-has-key($font-sizing, $size) {
-    font-size: map-get($font-sizing, $size);
+  @if map-has-key($font-sizes, $size) {
+    font-size: map-get($font-sizes, $size);
   } @else {
-    @error "#{$size} this is not defined, Use #{font-sizing}";
+    @error "#{$size} this is not defined, Use #{$font-sizes}";
   }
 }
 // functions in sass
 @function font-size($size) {
-  @if map-has-key($font-sizing, $size) {
-    @return map-get($font-sizing, $size);
+  @if map-has-key($font-sizes, $size) {
+    @return map-get($font-sizes, $size);
   } @else {
-    @error "#{$size} this is not defined, Use #{font-sizing}";
+    @error "#{$size} this is not defined, Use #{$font-sizes}";
   }
 }
